@@ -12,4 +12,9 @@ export class AppComponent {
   constructor(private calculatorService: CalculatorService) {
     console.log('Using calculator service from library. 1 + 2 is ...', this.calculatorService.add(1, 2));
   }
+
+  externalAdd(a: number, b: number) {
+    return this.calculatorService.add(a, b);
+  }
+
 }
